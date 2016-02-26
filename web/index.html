@@ -1,11 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>OpenBooks</title>
-</head>
-	<frameset rows="32,*" frameborder="0">
-  	<frame src="chrome.html" name="chrome" scrolling="no" noresize="noresize" id="chrome" title="chrome" />
-  	<frame src="content.html" name="content" id="content" title="content" />
-	</frameset>
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--
+*************************************************
+* Windows Media Player                   _ [] X *
+*===============================================*
+*  music:                                       *
+*                                   opus no. 1  *
+*             by tim carleton and darrick deel  *
+*               (cisco callmanager hold music)  *
+*************************************************
+  !-->
+  
+  
+    <meta charset="UTF-8">
+    <title>OpenBooks</title>
+  <style type="text/css">
+  body {
+    background-image: url("img/bg-move.gif");
+    color: white;
+  }
+ 
+img.ri
+{
+	position: absolute;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+	border-radius: 3px;
+}
+img.ri:empty
+{
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+@media screen and (orientation: portrait) {
+  img.ri { max-width: 90%; }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri { max-height: 90%; }
+}
+</style>
+  </head>
+  <body>
+  <script type="text/javascript" src="adblockbar.js"></script>
+<audio loop autoplay>
+  <source src="https://www.dropbox.com/s/tdy9d6kr9rt4o4g/opus.mp3?dl=1" type="audio/mpeg">
+</audio>
+<a href="openbooks.html"><img src="img/splash.png" class="ri" /></a>
+  </body>
 </html>
