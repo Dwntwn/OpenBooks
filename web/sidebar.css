@@ -54,7 +54,7 @@ a:visited {
     cursor: url(img/cursor_hov.png), auto;
 }
 a:hover {
-	color: #4cc9d9;
+	color: #00bfd7;
     cursor: url(img/cursor_hov.png), auto;
 }
 a:active {

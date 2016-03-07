@@ -4,6 +4,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>openbooks.neocities.org</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript">
+					var tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+					var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+					
+					function GetClock(){
+					var d=new Date();
+					var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
+					var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+					if(nhour==0){ap=" am";nhour=12;}
+					else if(nhour<12){ap=" am";}
+					else if(nhour==12){ap=" pm";}
+					else if(nhour>12){ap=" pm";nhour-=12;}
+					
+					if(nmin<=9) nmin="0"+nmin;
+					
+					document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+ap+", "+tday[nday]+", "+tmonth[nmonth]+" "+ndate+""
+					}
+					
+					
+					window.onload=function(){
+					GetClock();
+					setInterval(GetClock,1000);
+					}
+				</script>
 <style type="text/css">
 body {
     background-image: url(img/bg-move.gif);
@@ -18,11 +42,12 @@ body {
 <body>
 	<div id="content">
         <div id="logo" width="500px"></div>
+        <h1>Welcome</h1>
         <hr />
         <table width="700" border="0" style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.0);">
             <tr>
-                <td><h1>Welcome</h1><hr /></td>
-                <td width="200"><h1>Featured</h1><hr /></td>
+                <td><div id="clockbox"></div><hr /></td>
+                <td width="200"><h4>Featured</h4><hr /></td>
             </tr>
         </table>
         <table width="700">
@@ -33,9 +58,9 @@ body {
                     <hr />
                     <div style="padding:4px;">
                         <h3>Recently</h3>
-                        <p><b>Blog: </b>Update Schedule &bull; <a href="blog.html">more</a></p>
+                        <p><b>Blog: </b>15,000 hits &bull; <a href="blog.html">more</a></p>
                         <p><b>Articles: </b>No recent articles published.</p>
-                        <p><b>Updates: </span></b>OpenBooks 3.1 - "Click To Enter" &bull; <a href="updates.html">more</a></p>
+                        <p><b>Updates: </span></b>OpenBooks 3.2 - [REDACTED] &bull; <a href="updates.html">more</a></p>
                     </div>
                     <hr />
                     <div style="padding:4px;">
